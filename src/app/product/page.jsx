@@ -79,17 +79,17 @@ const Product = () => {
               {/* Right: Text Content */}
               <div className="w-full md:w-1/2 space-y-6">
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-bold text-gray-800">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center md:text-left">
                   {product.title}
                 </h3>
 
                 {/* Power Range */}
-                <p className="text-lg font-semibold text-[#F69133]">
+                <p className="text-lg font-semibold text-[#F69133] text-center md:text-left">
                   {product.powerRange}
                 </p>
 
                 {/* Icon Section */}
-                <div className="flex gap-6">
+                <div className="flex gap-6 justify-center md:justify-start">
                   <div className="text-center">
                     <div className="flex justify-center">
                     <img src={product.icon1} alt="chip mx-auto" />
@@ -122,7 +122,7 @@ const Product = () => {
                 {/* Features List */}
                 <div className="space-y-3">
                   {product.features.map((feature, index) => (
-                    <div key={index} className="flex items-center">
+                    <div key={index} className="flex items-center justify-center md:justify-start">
                       <div className="w-6 h-6 bg-[#F69133] text-white rounded-full flex items-center justify-center mr-3 text-sm font-bold">
                         ✓
                       </div>

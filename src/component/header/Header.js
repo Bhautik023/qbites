@@ -58,11 +58,13 @@ const Header = () => {
       <header className="absolute inset-x-0 top-0 z-50 h-16 flex items-center px-4 md:px-8 bg-transparent">
         {/* Logo & Brand */}
         <div className="flex items-center gap-2 mr-4 md:mr-8">
-          <img
-            src="/images/primary-logo.png"
-            alt="Qbits Inverter Logo"
-            className="h-8 w-auto"
-          />
+          <Link href="/" className="flex items-center">
+            <img
+              src="/images/primary-logo.png"
+              alt="Qbits Inverter Logo"
+              className="h-8 w-auto"
+            />
+          </Link>
         </div>
         {/* Hamburger for mobile */}
         <button
@@ -70,32 +72,58 @@ const Header = () => {
           onClick={() => setMobileMenuOpen((v) => !v)}
           aria-label="Toggle menu"
         >
-          <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <svg
+            className="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
             {mobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 8h16M4 16h16"
+              />
             )}
           </svg>
         </button>
         {/* Navigation */}
         <nav className="hidden md:flex flex-1">
           <ul className="flex items-center justify-end gap-7 w-full">
-            {menuItems.map(({ label, path }) => (
-              <li key={label}>
-                <Link
-                  href={path}
-                  onClick={() => setIsActive(path)}
-                  className={`text-white font-medium transition hover:text-green-200 px-1 pb-1 ${
-                    isActive === path
-                      ? "border-b-2 border-yellow-300 font-bold"
-                      : ""
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {menuItems.map(({ label, path }) => {
+              const isExactMatch = pathname === path;
+              const isSubPathMatch = pathname.startsWith(path + "/");
+              const isResourceCentre = pathname.startsWith("/resource-centre");
+              const isHome = path === "/" && pathname === "/";
+
+              const isActiveMainMenu =
+                (isExactMatch || isSubPathMatch) &&
+                (!isResourceCentre || path === "/resource-centre") &&
+                (path !== "/" || isHome);
+
+              return (
+                <li key={label}>
+                  <Link
+                    href={path}
+                    onClick={() => setIsActive(path)}
+                    className={`text-white font-medium transition hover:text-green-200 px-1 pb-1 ${
+                      isActiveMainMenu
+                        ? "border-b-2 border-yellow-300 font-bold"
+                        : ""
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
 
             {/* Resource Centre Dropdown */}
             <li className="relative dropdown-parent">
@@ -156,9 +184,12 @@ const Header = () => {
       </header>
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/60 bg-opacity-60 md:hidden" onClick={() => setMobileMenuOpen(false)}>
+        <div
+          className="fixed inset-0 z-40 bg-black/60 bg-opacity-60 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        >
           <div
-            className="absolute top-16 left-0 w-full bg-white shadow-lg rounded-b-lg p-4"
+            className="absolute top-16 left-0 w-full bg-[#16A16C] shadow-lg rounded-b-lg p-4"
             onClick={(e) => e.stopPropagation()}
           >
             <ul className="flex flex-col gap-3">
@@ -170,7 +201,7 @@ const Header = () => {
                       setIsActive(path);
                       setMobileMenuOpen(false);
                     }}
-                    className={`block text-gray-900 font-medium transition hover:text-green-700 px-1 pb-1 ${
+                    className={`block text-white font-medium transition hover:text-green-700 px-1 pb-1 ${
                       isActive === path
                         ? "border-b-2 border-yellow-300 font-bold"
                         : ""
@@ -184,7 +215,7 @@ const Header = () => {
               <li>
                 <details>
                   <summary
-                    className={`cursor-pointer text-gray-900 font-medium flex items-center ${
+                    className={`cursor-pointer text-white font-medium flex items-center ${
                       pathname.startsWith("/resource-centre")
                         ? "border-b-2 border-yellow-300 font-bold"
                         : ""
@@ -210,7 +241,7 @@ const Header = () => {
                       <Link
                         key={label}
                         href={path}
-                        className={`block px-2 py-2 hover:bg-green-100 font-medium text-gray-800 ${
+                        className={`block px-2 py-2 hover:bg-green-100 font-medium text-white ${
                           pathname === path ? "text-green-700 font-bold" : ""
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
@@ -228,7 +259,7 @@ const Header = () => {
                   className="block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <button className="w-full bg-transparent border border-green-700 rounded-full px-6 py-2 text-green-700 font-semibold transition">
+                  <button className="w-full border bg-white border-green-700 rounded-full px-6 py-2 text-green-700 font-semibold transition">
                     Contact Us
                   </button>
                 </Link>

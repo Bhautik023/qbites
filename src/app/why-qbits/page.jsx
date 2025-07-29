@@ -4,7 +4,7 @@ const WhyQbits = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Green Background */}
-      <div className="bg-[#16A16C] bg-[url('/images/why-qbites/background.png')] bg-cover bg-center bg-no-repeat px-6 py-16 lg:py-24">
+      <div className="bg-[#16A16C] bg-[url('/images/why-qbites/background.png')] bg-cover bg-center bg-no-repeat px-6 pt-[175px] pb-26">
         <div className="mx-auto">
           {/* Main Title */}
           <h1 className="text-white text-4xl lg:text-5xl font-bold text-center mb-16">

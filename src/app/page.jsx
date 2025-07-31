@@ -45,6 +45,32 @@ const whyQbites = [
 
 const Home = () => {
     const [activeTab, setActiveTab] = useState("single");
+    const [isDownloading, setIsDownloading] = useState(false);
+
+    const handleDownload = async () => {
+        setIsDownloading(true);
+
+        try {
+            const response = await fetch("/broucher.pdf");
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+
+            const link = document.createElement("a");
+            link.href = url;
+            link.download = "Company-Brochure.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Clean up the URL object
+            window.URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error("Download failed:", error);
+            alert("Download failed. Please try again.");
+        } finally {
+            setIsDownloading(false);
+        }
+    };
 
     const products = {
         single: {
@@ -510,8 +536,19 @@ const Home = () => {
                     <h3 className="text-2xl text-center mt-4 text-[#F69133]">
                         Download Company Brochure
                     </h3>
-                    <button className="mt-4 mx-auto block cursor-pointer">
-                        <img src="/images/downloadbtn.png" />
+                    <button
+                        className="mt-4 mx-auto block cursor-pointer disabled:opacity-50"
+                        onClick={handleDownload}
+                        disabled={isDownloading}
+                    >
+                        {isDownloading ? (
+                            <span className="text-white">Downloading...</span>
+                        ) : (
+                            <img
+                                src="/images/downloadbtn.png"
+                                alt="Download Brochure"
+                            />
+                        )}
                     </button>
                 </div>
             </section>

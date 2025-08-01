@@ -536,20 +536,24 @@ const Home = () => {
                     <h3 className="text-2xl text-center mt-4 text-[#F69133]">
                         Download Company Brochure
                     </h3>
-                    <button
-                        className="mt-4 mx-auto block cursor-pointer disabled:opacity-50"
-                        onClick={handleDownload}
-                        disabled={isDownloading}
-                    >
-                        {isDownloading ? (
-                            <span className="text-white">Downloading...</span>
-                        ) : (
+                    {/* {!isDownloading ? ( */}
+                        <button
+                            className="mt-4 mx-auto block cursor-pointer disabled:opacity-50"
+                            onClick={handleDownload}
+                            disabled={isDownloading}
+                        >
                             <img
                                 src="/images/downloadbtn.png"
                                 alt="Download Brochure"
                             />
-                        )}
-                    </button>
+                        </button>
+                    {/* ) : (
+                        <div className="flex justify-center items-center">
+                            <span className="rounded-full mt-4 mx-auto block text-white font-bold text-xl cursor-pointer text-center p-4 bg-[#16A16C]">
+                                Downloading Brochure {">>"}
+                            </span>
+                        </div>
+                    )} */}
                 </div>
             </section>
         </>

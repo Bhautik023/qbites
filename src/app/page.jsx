@@ -7,8 +7,9 @@ import "swiper/css/pagination"; // Optional, if you want pagination
 import { Pagination, Autoplay } from "swiper/modules";
 import Background from "../assets/icons/bg.svg";
 import AiChat from "../assets/images/ai-chat.svg";
-import FinalBg from "../assets/images/final-bg.svg";
 import CheckBox from "../assets/icons/check-box.svg";
+import background from "../assets/images/backgroundDesign.png"
+import FinalBg from '../assets/images/FinalBackground.svg'
 
 const whyQbites = [
     {
@@ -530,16 +531,16 @@ const Home = () => {
                     <div className="lg:w-[40%] w-full">
                         <AiChat />
                     </div>
-                    <div className="lg:w-[60%] w-full">
-                        <div className="space-y-16">
-                            <h1 className="text-6xl font-bold text-white mb-3">
+                    <div className="lg:w-[60%] w-full py-10">
+                        <div className="">
+                            <h1 className="text-6xl font-bold text-white mb-2">
                                 India’s First Intelligent Inverter
                             </h1>
-                            <h2 className="text-3xl font-semibold text-white mb-6">
+                            <h2 className="text-3xl font-semibold text-white mb-8">
                                 with Built-In Memory for Uninterrupted
                                 Monitoring.
                             </h2>
-                            <p className="text-white text-xl">
+                            <p className="text-white text-xl mb-16">
                                 Shaping the Future of Solar with Intelligent &
                                 Reliable Inverters / Transforming Energy with{" "}
                                 <br /> Intelligent, Real-Time Solar Solutions

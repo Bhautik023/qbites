@@ -5,6 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination"; // Optional, if you want pagination
 import { Pagination, Autoplay } from "swiper/modules";
+import Background from "../assets/icons/bg.svg";
+import AiChat from "../assets/images/ai-chat.svg";
+import FinalBg from "../assets/images/final-bg.svg";
+import CheckBox from "../assets/icons/check-box.svg";
 
 const whyQbites = [
     {
@@ -518,13 +522,67 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-16">
-                <div className="mx-auto">
-                    <img
-                        src="/images/intelligent_invertor.png"
-                        className="w-full h-auto block"
-                        alt="How Qbits Works"
-                    />
+            <section className=" lg:h-[781px] w-full bg-[#16A16C] relative py-[50px]">
+                <div className="absolute inset-0 hidden lg:block">
+                    <FinalBg />
+                </div>
+                <div className="relative z-10 flex flex-col lg:flex-row gap-32">
+                    <div className="lg:w-[40%] w-full">
+                        <AiChat />
+                    </div>
+                    <div className="lg:w-[60%] w-full">
+                        <div className="space-y-16">
+                            <h1 className="text-6xl font-bold text-white mb-3">
+                                India’s First Intelligent Inverter
+                            </h1>
+                            <h2 className="text-3xl font-semibold text-white mb-6">
+                                with Built-In Memory for Uninterrupted
+                                Monitoring.
+                            </h2>
+                            <p className="text-white text-xl">
+                                Shaping the Future of Solar with Intelligent &
+                                Reliable Inverters / Transforming Energy with{" "}
+                                <br /> Intelligent, Real-Time Solar Solutions
+                            </p>
+                            <div className="text-lg">
+                                <span className="flex items-center gap-2 mt-6 text-white">
+                                    <CheckBox />{" "}
+                                    <p>
+                                        India’s first inverter with local
+                                        storage backup
+                                    </p>
+                                </span>
+                                <span className="flex items-center gap-2 mt-6 text-white">
+                                    <CheckBox />{" "}
+                                    <p>
+                                        No data loss during power or internet
+                                        failure
+                                    </p>
+                                </span>
+                                <span className="flex items-center gap-2 mt-6 text-white">
+                                    <CheckBox />{" "}
+                                    <p>
+                                        Chip-based memory for uninterrupted
+                                        performance tracking
+                                    </p>
+                                </span>
+                                <span className="flex items-center gap-2 mt-6 text-white">
+                                    <CheckBox />{" "}
+                                    <p>
+                                        24×7 remote support + real-time AI
+                                        monitoring
+                                    </p>
+                                </span>
+                                <span className="flex items-center gap-2 mt-6 text-white">
+                                    <CheckBox />{" "}
+                                    <p>
+                                        Built-in for EPCs, businesses, and smart
+                                        homes
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -537,16 +595,16 @@ const Home = () => {
                         Download Company Brochure
                     </h3>
                     {/* {!isDownloading ? ( */}
-                        <button
-                            className="mt-4 mx-auto block cursor-pointer disabled:opacity-50"
-                            onClick={handleDownload}
-                            disabled={isDownloading}
-                        >
-                            <img
-                                src="/images/downloadbtn.png"
-                                alt="Download Brochure"
-                            />
-                        </button>
+                    <button
+                        className="mt-4 mx-auto block cursor-pointer disabled:opacity-50"
+                        onClick={handleDownload}
+                        disabled={isDownloading}
+                    >
+                        <img
+                            src="/images/downloadbtn.png"
+                            alt="Download Brochure"
+                        />
+                    </button>
                     {/* ) : (
                         <div className="flex justify-center items-center">
                             <span className="rounded-full mt-4 mx-auto block text-white font-bold text-xl cursor-pointer text-center p-4 bg-[#16A16C]">

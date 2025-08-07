@@ -24,7 +24,7 @@ const Footer = () => (
 
             {/* Middle: Quick Links */}
             <div className="md:w-[25%] mb-8 md:mb-0 flex flex-col md:items-center">
-                <span className="font-bold text-lg mb-2 text-green-600">
+                <span className="font-bold text-lg mb-2 text-[#16A16C]">
                     Quick Links
                 </span>
                 <ul className="space-y-2 text-gray-700 text-sm">
@@ -75,7 +75,7 @@ const Footer = () => (
 
             {/* Right: Contact Info */}
             <div className="md:w-[25%] flex flex-col items-start">
-                <span className="font-bold text-lg mb-2 text-green-600">
+                <span className="font-bold text-lg mb-2 text-[#16A16C]">
                     Get In Touch
                 </span>
                 <ul className="space-y-2 text-gray-700 text-sm mb-6">
@@ -107,11 +107,8 @@ const Footer = () => (
             </div>
         </div>
         <div className="border-t border-gray-200 py-4">
-            <div className="mx-8 px-4 flex flex-col md:flex-row md:justify-between items-center text-lg text-[#16A16C]">
-                <span>
-                    Copyrights © 2025 Qbits. All Rights Reserved. | Designs by @
-                    The Designs Live.
-                </span>
+            <div className="mx-8 px-4 flex flex-col md:flex-row md:justify-end items-center text-lg text-[#16A16C]">
+               
                 {/* Social Icons */}
                 <div className="flex space-x-4">
                     <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">

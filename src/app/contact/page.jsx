@@ -42,14 +42,16 @@ const Contact = () => {
             />
 
             {/* Left Side - Green Contact Card */}
-            <div className="bg-[#16A16C] rounded-2xl py-4 px-6 my-2 text-white">
-              <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
+            <div className="bg-[#16A16C] rounded-2xl py-4 px-6 my-2 text-white relative">
+              <div className="absolute inset-0 z-0"> 
+                <img src="/images/contact-us/get-in-touch.png" alt="frame" className="w-full h-full" />
+              </div>
 
               {/* Let's Talk */}
               <div className="mb-8">
                 <div className="flex items-center mb-2">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-3">
-                    <span className="text-green-500 text-sm">📞</span>
+                  <div className="w-6 h-6 text-white rounded-full flex items-center justify-center mr-3">
+                    <img src="/images/contact/call.svg" alt="call-icon" />
                   </div>
                   <h3 className="font-semibold">Let's Talk</h3>
                 </div>
@@ -59,8 +61,8 @@ const Contact = () => {
               {/* General Support */}
               <div className="mb-8">
                 <div className="flex items-center mb-2">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-3">
-                    <span className="text-green-500 text-sm">💬</span>
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center mr-3">
+                    <img src="/images/contact/email.svg" alt="email-icon" />
                   </div>
                   <h3 className="font-semibold">General Support</h3>
                 </div>
@@ -75,17 +77,17 @@ const Contact = () => {
               {/* Address */}
               <div>
                 <div className="flex items-center mb-2">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-3">
-                    <span className="text-green-500 text-sm">📍</span>
+                  <div className="w-6 h-6rounded-full flex items-center justify-center mr-3">
+                    <img src="/images/contact/location.svg" alt="location-icon" />
                   </div>
                   <h3 className="font-semibold">Address</h3>
                 </div>
                 <p className="text-sm opacity-90 ml-9">
-                  201, Aksquisition Square, Plot 5and 6 Kuppuswamy Street,
+                  201, Anupam square, SAT Swaminarayana
                   <br />
-                  Thousand Lit., Adyar Chennai, Tamil
+                  Temple Rd,  Mota Varachha, Surat,
                   <br />
-                  Nadu 600020
+                  Gujarat 394101
                 </p>
               </div>
             </div>

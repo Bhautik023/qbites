@@ -7,8 +7,9 @@ import "swiper/css/pagination"; // Optional, if you want pagination
 import { Pagination, Autoplay } from "swiper/modules";
 import Background from "../assets/icons/bg.svg";
 import AiChat from "../assets/images/ai-chat.svg";
-import FinalBg from "../assets/images/final-bg.svg";
 import CheckBox from "../assets/icons/check-box.svg";
+import background from "../assets/images/backgroundDesign.png"
+import FinalBg from '../assets/images/FinalBackground.svg'
 
 const whyQbites = [
     {

@@ -132,19 +132,19 @@ const Home = () => {
 
             <section className="py-16 bg-white">
                 <div className="w-full px-4 md:px-32">
-                    <div className="flex flex-col md:flex-row gap-8 md:gap- w-full">
+                    <div className="flex md:flex-row flex-col-reverse gap-8 md:gap- w-full">
                         {/* Left Column (Image - 40%) */}
                         <div className="md:w-fit w-full flex justify-center items-center">
                             <img
                                 src="images/story-image.png"
                                 alt="Our Story"
-                                className=""
+                                className="h-[400px] md:h-full"
                             />
                         </div>
 
                         {/* Right Column (Text - 60%) */}
                         <div className="md:w-full w-full px-8 md:px-0">
-                            <h2 className="text-4xl font-bold mb-4 text-[#F69133]">
+                            <h2 className="text-4xl font-bold mb-4 text-[#F69133] text-center md:text-start">
                                 Our Story
                             </h2>
                             <p className="text-[#606062] font-medium">
@@ -186,7 +186,7 @@ const Home = () => {
                             </p>
 
                             {/* Bottom Images */}
-                            <div className="grid grid-cols-2 gap-8 mt-12">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
                                 <div className="flex items-center justify-center">
                                     <img
                                         src="images/story1.png"
@@ -360,11 +360,11 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="py-16 bg-white relative">
+            <section className="py-16 bg-white relative px-3 md:px-0">
                 <div className="mx-auto sm:px-10 md:px-28">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 relative">
                         <div className="md:col-span-7">
-                            <h2 className="text-4xl font-bold mb-4 text-[#F69133]">
+                            <h2 className="text-4xl text-center md:text-start font-bold mb-4 text-[#F69133]">
                                 Why Qbits?
                             </h2>
                             <div className="mt-10 space-y-5">
@@ -526,28 +526,29 @@ const Home = () => {
                 <div className="absolute inset-0 hidden lg:block">
                     <FinalBg />
                 </div>
-                <div className="relative z-10 flex flex-col lg:flex-row gap-32">
+                <div className="relative z-10 flex flex-col lg:flex-row gap-10 md:gap-32">
                     <div className="lg:w-[40%] w-full">
-                        <AiChat />
+                        {/* <AiChat /> */}
+                        <img src="/images/home/whatsapp.png" alt="whatsapp" />
                     </div>
-                    <div className="lg:w-[60%] w-full">
+                    <div className="lg:w-[60%] w-full py-5 px-3">
                         <div className="space-y-16">
-                            <h1 className="text-6xl font-bold text-white mb-3">
+                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
                                 India’s First Intelligent Inverter
                             </h1>
-                            <h2 className="text-3xl font-semibold text-white mb-6">
+                            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
                                 with Built-In Memory for Uninterrupted
                                 Monitoring.
                             </h2>
-                            <p className="text-white text-xl">
+                            <p className="text-white text-lg md:text-xl">
                                 Shaping the Future of Solar with Intelligent &
                                 Reliable Inverters / Transforming Energy with{" "}
                                 <br /> Intelligent, Real-Time Solar Solutions
                             </p>
-                            <div className="text-lg">
+                            <div className="text-[14px] md:text-lg">
                                 <span className="flex items-center gap-2 mt-6 text-white">
                                     <CheckBox />{" "}
-                                    <p>
+                                    <p className="">
                                         India’s first inverter with local
                                         storage backup
                                     </p>
@@ -562,7 +563,7 @@ const Home = () => {
                                 <span className="flex items-center gap-2 mt-6 text-white">
                                     <CheckBox />{" "}
                                     <p>
-                                        Chip-based memory for uninterrupted
+                                        Chip-based memory for <br /> uninterrupted
                                         performance tracking
                                     </p>
                                 </span>

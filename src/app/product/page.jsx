@@ -1,5 +1,17 @@
 import React from "react";
 
+export const metadata = {
+  title: 'Qbits Solar Inverters - Single & Three Phase Grid Tie Inverters | Qbits Inverters',
+  description: 'Qbits intelligent on-grid solar inverters from 1KW to 30KW. Single phase and three phase grid tie inverters with AI-powered monitoring, IP65 rating, and 98% conversion efficiency.',
+  keywords: 'Qbits inverters, solar inverters, grid tie inverters, single phase inverters, three phase inverters, on-grid solar inverter, solar power inverter',
+  openGraph: {
+    title: 'Qbits Solar Inverters - Intelligent Grid Tie Inverters',
+    description: 'Advanced solar inverters from 1KW to 30KW with AI-powered monitoring and 98% efficiency.',
+    type: 'website'
+  }
+}
+
+
 const Product = () => {
     const products = [
         // Existing 3 products

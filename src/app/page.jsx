@@ -1,15 +1,35 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination"; // Optional, if you want pagination
-import { Pagination, Autoplay } from "swiper/modules";
+
 import Background from "../assets/icons/bg.svg";
 import AiChat from "../assets/images/ai-chat.svg";
 import CheckBox from "../assets/icons/check-box.svg";
-import background from "../assets/images/backgroundDesign.png"
-import FinalBg from '../assets/images/FinalBackground.svg'
+import background from "../assets/images/backgroundDesign.png";
+import FinalBg from "../assets/images/FinalBackground.svg";
+import ProductSlider from "@/component/productSlider/ProductSlider";
+import DownloadButton from "@/component/downloadButton/DownloadButton";
+import SwiperSlider from "@/component/swiper/SwiperSlider";
+
+export const metadata = {
+  title: 'Qbits Inverters - Leading Solar EPC Company in Gujarat | Qbits Inverters',
+  description: 'Qbits Inverters Limited - Gujarat\'s top 3 EPC firm with 10,000+ solar installations. Makers of Qbits intelligent on-grid solar inverters. ISO 9001 certified, official Adani Solar distributor.',
+  keywords: 'solar energy, EPC company Gujarat, solar installation, Qbits inverters, Qbits Inverters, solar panels, renewable energy, Surat solar company',
+  author: 'Qbits Inverters Limited',
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1',
+  openGraph: {
+    title: 'Qbits Inverters - Leading Solar EPC Company in Gujarat',
+    description: 'Gujarat\'s trusted solar EPC company with 10,000+ installations. Makers of Qbits intelligent solar inverters.',
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'Qbits Inverters'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Qbits Inverters - Leading Solar EPC Company',
+    description: 'Gujarat\'s trusted solar EPC company with 10,000+ installations.'
+  }
+}
 
 const whyQbites = [
     {
@@ -49,87 +69,9 @@ const whyQbites = [
 ];
 
 const Home = () => {
-    const [activeTab, setActiveTab] = useState("single");
-    const [isDownloading, setIsDownloading] = useState(false);
-
-    const handleDownload = async () => {
-        setIsDownloading(true);
-
-        try {
-            const response = await fetch("/broucher.pdf");
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "Company-Brochure.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            // Clean up the URL object
-            window.URL.revokeObjectURL(url);
-        } catch (error) {
-            console.error("Download failed:", error);
-            alert("Download failed. Please try again.");
-        } finally {
-            setIsDownloading(false);
-        }
-    };
-
-    const products = {
-        single: {
-            title: "Single Phase Grid Tie Inverter",
-            highlightTitle: "Single Phase Grid Tie Inverter",
-            subtitle: "Efficient, Reliable, Easy to Install.",
-            capacity: ["1KW to 4KW - 1 MPPT", "5KW to 6KW - 2 MPPT"],
-            features: [
-                "Optimized DC/AC Ratio for Maximum Power Yields",
-                "Wide Input Voltage Range with Low Start-Up at Just 80V",
-                "Advanced Surge Protection on Both AC & DC Sides",
-            ],
-        },
-        three: {
-            title: "Three Phase Grid Tie Inverter",
-            highlightTitle: "Three Phase Grid Tie Inverter",
-            subtitle: "Efficient, Reliable, Easy to Install.",
-            capacity: ["8KW to 30KW - 2 MPPT"],
-            features: [
-                "Type II DC/AC SPD for Advanced Surge Protection",
-                "Engineered for large-scale solar installations",
-                "Max. DC Input Current Per String",
-            ],
-        },
-    };
-
-    const currentProduct = products[activeTab];
-
     return (
         <>
-            <header className="relative w-full overflow-hidden">
-                <Swiper
-                    modules={[Pagination, Autoplay]}
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    loop={true}
-                    className="w-full"
-                >
-                    <SwiperSlide>
-                        <img
-                            src="/images/home/slider-1.png"
-                            alt="Slide 1"
-                            className="w-full h-auto object-cover"
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            src="/images/home/slider-2.png"
-                            alt="Slide 2"
-                            className="w-full h-auto object-cover"
-                        />
-                    </SwiperSlide>
-                </Swiper>
-            </header>
+            <SwiperSlider />
 
             <section className="py-16 bg-white">
                 <div className="w-full px-4 md:px-32">
@@ -155,7 +97,7 @@ const Home = () => {
                                 </span>{" "}
                                 and{" "}
                                 <span className="text-[#F69133]">
-                                    Akash Hirpara — Heaven Green Energy Ltd.
+                                    Akash Hirpara — Qbits Inverters Ltd.
                                 </span>{" "}
                                 began as a humble venture with freelance design
                                 projects and small solar installations, driven
@@ -206,160 +148,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="w-full bg-[#2BA968] relative overflow-hidden">
-                <div className="max-w-[1200px] mx-auto px-8 py-16">
-                    {/* Header */}
-                    <h2 className="text-5xl font-bold text-white text-center mb-16">
-                        Our Products
-                    </h2>
-
-                    {/* Content Container with rounded border */}
-                    <div className="bg-transparent border border-white/30 rounded-[40px] p-5 md:p-12 relative">
-                        <div className="flex items-center justify-evenly">
-                            <div
-                                className="mb-8 cursor-pointer"
-                                onClick={() => setActiveTab("single")}
-                            >
-                                <h3
-                                    className={`text-2xl font-semibold mb-2 text-center ${
-                                        activeTab === "single"
-                                            ? "text-[#F69133]"
-                                            : "text-white"
-                                    }`}
-                                >
-                                    Single Phase Grid Tie Inverter
-                                </h3>
-                                {activeTab === "single" && (
-                                    <div className="w-16 h-0.5 bg-[#F69133] mx-auto"></div>
-                                )}
-                            </div>
-                            <div
-                                className="mb-8 cursor-pointer"
-                                onClick={() => setActiveTab("three")}
-                            >
-                                <h3
-                                    className={`text-2xl font-semibold mb-2 text-center ${
-                                        activeTab === "three"
-                                            ? "text-[#F69133]"
-                                            : "text-white"
-                                    }`}
-                                >
-                                    Three Phase Grid Tie Inverter
-                                </h3>
-                                {activeTab === "three" && (
-                                    <div className="w-16 h-0.5 bg-[#F69133] mx-auto"></div>
-                                )}
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center min-h-[500px]">
-                            {/* Left Side - Product Image */}
-                            <div className="flex flex-col items-center justify-center">
-                                {/* Tab Headers */}
-                                {/* <div className="mb-8">
-                                    <h3
-                                        className={`text-2xl font-semibold mb-2 text-center ${
-                                            activeTab === "single"
-                                                ? "text-orange-400"
-                                                : "text-white"
-                                        }`}
-                                    >
-                                        Single Phase Grid Tie Inverter
-                                    </h3>
-                                    {activeTab === "single" && (
-                                        <div className="w-16 h-0.5 bg-orange-400 mx-auto"></div>
-                                    )}
-                                </div> */}
-
-                                {/* Product Image Container */}
-                                <div className="relative">
-                                    {activeTab === "single" ? (
-                                        // Single Phase Inverter Design
-                                        <img
-                                            src="/images/home/single-phase.png"
-                                            alt="single-phase"
-                                        />
-                                    ) : (
-                                        // Three Phase Inverter Design
-                                        <img
-                                            src="/images/home/three-phase.png"
-                                            alt="three-phase"
-                                        />
-                                    )}
-                                </div>
-                            </div>
-
-                            {/* Right Side - Product Details */}
-                            <div className="text-white">
-                                {/* Tab Headers */}
-                                {/* <div className="mb-8">
-                                    <h3
-                                        className={`text-2xl font-semibold mb-2 ${
-                                            activeTab === "three"
-                                                ? "text-orange-400"
-                                                : "text-white"
-                                        }`}
-                                    >
-                                        Three Phase Grid Tie Inverter
-                                    </h3>
-                                    {activeTab === "three" && (
-                                        <div className="w-16 h-0.5 bg-orange-400"></div>
-                                    )}
-                                </div> */}
-
-                                <p className="text-lg mb-8 text-white/90">
-                                    {currentProduct.subtitle}
-                                </p>
-
-                                {/* Capacity/Power ratings */}
-                                <div className="mb-8">
-                                    {currentProduct.capacity.map(
-                                        (cap, index) => (
-                                            <h4
-                                                key={index}
-                                                className="text-2xl font-bold text-white mb-2"
-                                            >
-                                                {cap}
-                                            </h4>
-                                        )
-                                    )}
-                                </div>
-
-                                {/* Features list */}
-                                <div className="space-y-4 mb-10">
-                                    {currentProduct.features.map(
-                                        (feature, index) => (
-                                            <div
-                                                key={index}
-                                                className="flex items-start space-x-3"
-                                            >
-                                                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                                                <p className="text-white/90 leading-relaxed text-base">
-                                                    {feature}
-                                                </p>
-                                            </div>
-                                        )
-                                    )}
-                                </div>
-
-                                {/* Know More Button */}
-                                <button className="bg-[#F69133] hover:bg-white hover:text-black text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer">
-                                    Know More &gt;&gt;
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* Tab switching - invisible buttons over the tab titles */}
-                        <button
-                            onClick={() => setActiveTab("single")}
-                            className="absolute top-12 left-12 w-64 h-20 bg-transparent z-10"
-                        ></button>
-                        <button
-                            onClick={() => setActiveTab("three")}
-                            className="absolute top-12 right-12 w-64 h-20 bg-transparent z-10"
-                        ></button>
-                    </div>
-                </div>
-            </section>
+            <ProductSlider />
 
             <section className="py-16 bg-white relative px-3 md:px-0">
                 <div className="mx-auto sm:px-10 md:px-28">
@@ -564,8 +353,8 @@ const Home = () => {
                                 <span className="flex items-center gap-2 mt-6 text-white">
                                     <CheckBox />{" "}
                                     <p>
-                                        Chip-based memory for <br /> uninterrupted
-                                        performance tracking
+                                        Chip-based memory for <br />{" "}
+                                        uninterrupted performance tracking
                                     </p>
                                 </span>
                                 <span className="flex items-center gap-2 mt-6 text-white">
@@ -588,34 +377,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="py-16">
-                <div className="mx-auto">
-                    <h1 className="text-4xl font-bold text-center text-[#16A16C]">
-                        Want to Know More About Us?
-                    </h1>
-                    <h3 className="text-2xl text-center mt-4 text-[#F69133]">
-                        Download Company Brochure
-                    </h3>
-                    {/* {!isDownloading ? ( */}
-                    <button
-                        className="mt-4 mx-auto block cursor-pointer disabled:opacity-50"
-                        onClick={handleDownload}
-                        disabled={isDownloading}
-                    >
-                        <img
-                            src="/images/downloadbtn.png"
-                            alt="Download Brochure"
-                        />
-                    </button>
-                    {/* ) : (
-                        <div className="flex justify-center items-center">
-                            <span className="rounded-full mt-4 mx-auto block text-white font-bold text-xl cursor-pointer text-center p-4 bg-[#16A16C]">
-                                Downloading Brochure {">>"}
-                            </span>
-                        </div>
-                    )} */}
-                </div>
-            </section>
+            <DownloadButton />
         </>
     );
 };

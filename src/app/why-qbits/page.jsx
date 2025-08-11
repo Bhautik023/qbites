@@ -1,5 +1,17 @@
 import React from "react";
 
+export const metadata = {
+  title: 'Why Choose Qbits Solar Inverters | Smart Features & Benefits',
+  description: 'Discover why Qbits solar inverters are the smart choice - 98% conversion efficiency, Qbits App monitoring, future-ready technology, and trusted by 10,000+ Heaven Solar installations.',
+  keywords: 'why choose Qbits, solar inverter benefits, 98% efficiency, Qbits app, smart solar inverters, Heaven Solar, solar inverter features',
+  openGraph: {
+    title: 'Why Choose Qbits Solar Inverters',
+    description: 'Smart solar inverters with 98% efficiency, app monitoring, and future-ready technology.',
+    type: 'website'
+  }
+}
+
+
 const WhyQbits = () => {
     return (
         <div className="min-h-screen">

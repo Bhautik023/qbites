@@ -1,5 +1,17 @@
 import React from "react";
 
+export const metadata = {
+  title: 'About Us - Qbits Inverters | Solar EPC Company Since 2017',
+  description: 'Established in 2017, Qbits Inverters Limited is one of Gujarat\'s most trusted solar EPC companies with 10,000+ installations. ISO 9001 certified, official Adani Solar distributor.',
+  keywords: 'about Qbits Inverters, solar EPC company, Gujarat solar, DISCOM partner, GEDA, SLDC, GUVNL, ISO 9001, Adani Solar distributor',
+  openGraph: {
+    title: 'About Qbits Inverters - Trusted Solar EPC Company',
+    description: 'Established in 2017 with 10,000+ solar installations across Gujarat. ISO 9001 certified and official Adani Solar distributor.',
+    type: 'website'
+  }
+}
+
+
 const AboutUs = () => {
     return (
         <div className="bg-white">
@@ -32,7 +44,7 @@ const AboutUs = () => {
                     <p className="text-gray-600 mt-6">
                         Established in{" "}
                         <span className="font-semibold text-[#FD6A33]">
-                            2017, Heaven Green Energy Limited
+                            2017, Qbits Inverters Limited
                         </span>{" "}
                         has emerged as one of Gujarat’s most trusted solar EPC
                         companies — delivering over{" "}

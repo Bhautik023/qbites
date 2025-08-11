@@ -1,16 +1,21 @@
-"use client";
 import React from "react";
+import DownloadProducts from "@/component/downloadButton/DownloadProducts";
+
+export const metadata = {
+    title: "Downloads - Qbits Solar Inverter Resources | Qbits Inverters",
+    description:
+        "Download Qbits solar inverter brochures, technical specifications, installation guides, and product catalogs. Get all resources for Qbits Inverters solar products.",
+    keywords:
+        "Qbits downloads, solar inverter brochures, technical specifications, installation guides, product catalogs, Qbits Inverters resources",
+    openGraph: {
+        title: "Downloads - Qbits Solar Inverter Resources",
+        description:
+            "Download brochures, specifications, and guides for Qbits solar inverters.",
+        type: "website",
+    },
+};
 
 const Download = () => {
-    const handleDownload = () => {
-        const link = document.createElement("a");
-        link.href = "/download.zip"; // file inside public folder
-        link.download = "download.zip"; // suggested file name
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
-
     return (
         <div>
             <img
@@ -37,12 +42,7 @@ const Download = () => {
                             <h2 className="text-4xl font-bold text-green-600 mb-6">
                                 Download Brochure
                             </h2>
-                            <button
-                                onClick={handleDownload}
-                                className="bg-orange-400 hover:bg-orange-500 text-white px-8 py-3 rounded-full font-medium transition-colors"
-                            >
-                                Download Now →
-                            </button>
+                            <DownloadProducts />
                         </div>
                     </div>
                 </div>

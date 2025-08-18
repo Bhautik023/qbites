@@ -30,43 +30,43 @@ const Footer = () => (
                 <ul className="space-y-2 text-gray-700 text-sm">
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="/" className="hover:text-green-600 text-[#16A16C]">
                             Home
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="/about-us" className="hover:text-green-600 text-[#16A16C]">
                             About us
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="why-qbits" className="hover:text-green-600 text-[#16A16C]">
                             Services
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="/support" className="hover:text-green-600 text-[#16A16C]">
                             Help
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="/product" className="hover:text-green-600 text-[#16A16C]">
                             Product
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="/resource-centre/events" className="hover:text-green-600 text-[#16A16C]">
                             Our network
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="#" className="hover:text-green-600 text-[#16A16C]">
+                        <Link href="/contact" className="hover:text-green-600 text-[#16A16C]">
                             Contact us
                         </Link>
                     </li>

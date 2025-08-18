@@ -129,7 +129,7 @@ const Header = () => {
             <li className="relative dropdown-parent">
               <button
                 onClick={() => setDropdownOpen((v) => !v)}
-                className={`text-white font-medium transition px-1 pb-1 flex items-center hover:text-green-200 ${
+                className={`text-white font-medium transition px-1 pb-1 flex items-center hover:text-green-200 cursor-pointer ${
                   pathname.startsWith("/resource-centre")
                     ? "border-b-2 border-yellow-300 font-bold"
                     : ""
@@ -153,12 +153,12 @@ const Header = () => {
               </button>
               {dropdownOpen && (
                 <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-40 bg-white shadow-lg rounded-md flex flex-col border z-50">
-                  {resourceCentreDropdown.map(({ label, path }) => (
+                  {resourceCentreDropdown.map(({ label, path }, index) => (
                     <Link
                       key={label}
                       href={path}
                       className={`block px-4 py-2 hover:bg-green-100 font-medium text-gray-800 ${
-                        pathname === path ? "text-green-700 font-bold" : ""
+                        pathname === path ? `text-green-700 font-bold ${index === 0 ? "rounded-t-md hover:rounded-t-md" : index === resourceCentreDropdown.length - 1 ? "rounded-b-md hover:rounded-b-md" : ""} ` : ""
                       }`}
                       onClick={() => setDropdownOpen(false)}
                     >
@@ -176,7 +176,7 @@ const Header = () => {
             href="/contact"
             className={`text-white font-medium transition hover:text-green-200 px-1 pb-1`}
           >
-            <button className="bg-transparent border border-white rounded-full px-6 py-2 text-white font-semibold transition">
+            <button className="bg-transparent border border-white rounded-full px-6 py-2 text-white font-semibold transition cursor-pointer">
               Contact Us
             </button>
           </Link>

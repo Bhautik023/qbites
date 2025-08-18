@@ -33,21 +33,21 @@ const ProductSlider = () => {
 
     return (
         <section className="w-full bg-[#2BA968] relative overflow-hidden">
-            <div className="max-w-[1200px] mx-auto px-8 py-16">
+            <div className="max-w-[1200px] mx-auto px-3 md:px-8 py-10">
                 {/* Header */}
-                <h2 className="text-5xl font-bold text-white text-center mb-16">
+                <h2 className="text-3xl md:text-5xl font-bold text-white text-center mb-8 md:mb-16">
                     Our Products
                 </h2>
 
                 {/* Content Container with rounded border */}
                 <div className="bg-transparent border border-white/30 rounded-[40px] p-5 md:p-12 relative">
-                    <div className="flex items-center justify-evenly">
+                    <div className="flex items-center justify-evenly gap-3">
                         <div
                             className="mb-8 cursor-pointer"
                             onClick={() => setActiveTab("single")}
                         >
                             <h3
-                                className={`text-2xl font-semibold mb-2 text-center ${
+                                className={`md:text-2xl font-semibold mb-2 text-center ${
                                     activeTab === "single"
                                         ? "text-[#F69133]"
                                         : "text-white"
@@ -64,7 +64,7 @@ const ProductSlider = () => {
                             onClick={() => setActiveTab("three")}
                         >
                             <h3
-                                className={`text-2xl font-semibold mb-2 text-center ${
+                                className={`md:text-2xl font-semibold mb-2 text-center ${
                                     activeTab === "three"
                                         ? "text-[#F69133]"
                                         : "text-white"
@@ -173,14 +173,14 @@ const ProductSlider = () => {
                     </div>
 
                     {/* Tab switching - invisible buttons over the tab titles */}
-                    <button
+                    {/* <button
                         onClick={() => setActiveTab("single")}
                         className="absolute top-12 left-12 w-64 h-20 bg-transparent z-10"
                     ></button>
                     <button
                         onClick={() => setActiveTab("three")}
                         className="absolute top-12 right-12 w-64 h-20 bg-transparent z-10"
-                    ></button>
+                    ></button> */}
                 </div>
             </div>
         </section>

@@ -86,7 +86,7 @@ const Home = () => {
                         </div>
 
                         {/* Right Column (Text - 60%) */}
-                        <div className="md:w-full w-full px-8 md:px-0">
+                        <div className="md:w-full w-full ">
                             <h2 className="text-4xl font-bold mb-4 text-[#F69133] text-center md:text-start">
                                 Our Story
                             </h2>
@@ -312,25 +312,25 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className=" lg:h-[781px] w-full bg-[#16A16C] relative py-[50px]">
+            <section className=" lg:h-[781px] w-full bg-[#16A16C] relative md:py-[50px]">
                 <div className="absolute inset-0 hidden lg:block">
                     <FinalBg />
                 </div>
-                <div className="relative z-10 flex flex-col lg:flex-row gap-10 md:gap-32">
+                <div className="relative z-10 flex flex-col-reverse lg:flex-row gap-10 md:gap-32">
                     <div className="lg:w-[40%] w-full">
                         {/* <AiChat /> */}
                         <img src="/images/home/whatsapp.png" alt="whatsapp" />
                     </div>
                     <div className="lg:w-[60%] w-full py-5 px-3">
                         <div className="space-y-16">
-                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
+                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-3 text-center md:text-start">
                                 India’s First Intelligent Inverter
                             </h1>
-                            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
+                            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6 text-center md:text-start">
                                 with Built-In Memory for Uninterrupted
                                 Monitoring.
                             </h2>
-                            <p className="text-white text-lg md:text-xl">
+                            <p className="text-white text-lg md:text-xl text-center md:text-start">
                                 Shaping the Future of Solar with Intelligent &
                                 Reliable Inverters / Transforming Energy with{" "}
                                 <br /> Intelligent, Real-Time Solar Solutions
@@ -353,7 +353,7 @@ const Home = () => {
                                 <span className="flex items-center gap-2 mt-6 text-white">
                                     <CheckBox />{" "}
                                     <p>
-                                        Chip-based memory for <br />{" "}
+                                        Chip-based memory for <br className="block md:hidden" />{" "}
                                         uninterrupted performance tracking
                                     </p>
                                 </span>

@@ -26,13 +26,8 @@ const Contact = () => {
 
       {/* Contact Form Section */}
       <div className=" py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto border-2 border-[#16A16C] rounded-2xl">
           <div className="flex flex-col lg:flex-row gap-4 justify-between relative px-3">
-            <img
-              src="/images/products/product-fram.png"
-              alt="frame"
-              className="absolute left-0 right-0 pointer-events-none hidden md:block"
-            />
 
             {/* Left Side - Green Contact Card */}
             <div className="bg-[#16A16C] rounded-2xl py-4 px-6 my-2 text-white relative">

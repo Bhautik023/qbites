@@ -29,7 +29,7 @@ const DownloadButton = () => {
         }
     };
     return (
-        <section className="py-16">
+        <section className="py-16 px-3">
             <div className="mx-auto">
                 <h1 className="text-4xl font-bold text-center text-[#16A16C]">
                     Want to Know More About Us?

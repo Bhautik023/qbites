@@ -8,17 +8,21 @@ const Footer = () => (
             {/* Left: Branding & About */}
             <div className="w-full md:w-[50%] mb-8 md:mb-0">
                 <div className="flex items-center mb-4 w-[200px] h-[60px]">
-                    <img src="/images/footer-logo.png" alt="Qbits Logo" className="mr-2 w-full h-full" />
+                    <img
+                        src="/images/footer-logo.png"
+                        alt="Qbits Logo"
+                        className="mr-2 w-full h-full"
+                    />
                 </div>
                 <div className="md:w-[75%]">
-                <p className="text-[#16A16C] font-medium text-lg">
-                    At Qbits, we believe in empowering homes and businesses with
-                    intelligent, efficient, and safe solar energy solutions. Our
-                    TLS Grid Tie Solar Inverters are crafted with cutting-edge
-                    technology and AI integration to maximize performance,
-                    minimize energy costs, and contribute to a sustainable
-                    future.
-                </p>
+                    <p className="text-[#16A16C] font-medium text-lg">
+                        At Qbits, we believe in empowering homes and businesses
+                        with intelligent, efficient, and safe solar energy
+                        solutions. Our TLS Grid Tie Solar Inverters are crafted
+                        with cutting-edge technology and AI integration to
+                        maximize performance, minimize energy costs, and
+                        contribute to a sustainable future.
+                    </p>
                 </div>
             </div>
 
@@ -30,45 +34,70 @@ const Footer = () => (
                 <ul className="space-y-2 text-gray-700 text-sm">
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="/" className="hover:text-green-600 text-[#16A16C]">
+                        <Link
+                            href="/"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             Home
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="/about-us" className="hover:text-green-600 text-[#16A16C]">
+                        <Link
+                            href="/about-us"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             About us
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="why-qbits" className="hover:text-green-600 text-[#16A16C]">
+                        <a
+                            href="https://erp.heavengreenenergy.com/helpdesk/qbits-service-620"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             Services
-                        </Link>
+                        </a>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="/support" className="hover:text-green-600 text-[#16A16C]">
+                        <Link
+                            href="/support"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             Help
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="/product" className="hover:text-green-600 text-[#16A16C]">
+                        <Link
+                            href="/product"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             Product
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="/resource-centre/events" className="hover:text-green-600 text-[#16A16C]">
+                        <Link
+                            href="/resource-centre/events"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             Our network
                         </Link>
                     </li>
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
-                        <Link href="/contact" className="hover:text-green-600 text-[#16A16C]">
+                        <a
+                            href="https://erp.heavengreenenergy.com/contact-us"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-green-600 text-[#16A16C]"
+                        >
                             Contact us
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -89,39 +118,49 @@ const Footer = () => (
                     <li className="flex items-center text-[#16A16C]">
                         <div className="w-5 h-5 rounded-full flex items-center justify-center mr-2">
                             {/* Email Icon Placeholder */}
-                           <img src="/images/contact/email.svg" alt="Email" />
+                            <img src="/images/contact/email.svg" alt="Email" />
                         </div>
                         info@qbits.com
                     </li>
                     <li className="flex items-center text-[#16A16C]">
                         <div className="w-5 h-5 rounded-full flex items-center justify-center mr-2">
                             {/* Location Icon Placeholder */}
-                            <img src="/images/contact/location.svg" alt="Location" />
+                            <img
+                                src="/images/contact/location.svg"
+                                alt="Location"
+                            />
                         </div>
                         201, Anupam Square Mahadev Chowk
                         <br />
                         Mota Varachha, Surat, Gujarat - 394101
                     </li>
                 </ul>
-                
             </div>
         </div>
         <div className="border-t border-gray-200 py-4">
             <div className="mx-8 px-4 flex flex-col md:flex-row md:justify-end items-center text-lg text-[#16A16C]">
-               
                 {/* Social Icons */}
                 <div className="flex space-x-4">
                     <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                         {/* IG Placeholder */}
-                        <img src="/images/social-media/instagram.svg" alt="Instagram" />
+                        <img
+                            src="/images/social-media/instagram.svg"
+                            alt="Instagram"
+                        />
                     </div>
                     <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                         {/* FB Placeholder */}
-                       <img src="/images/social-media/facebook.svg" alt="Facebook" />
+                        <img
+                            src="/images/social-media/facebook.svg"
+                            alt="Facebook"
+                        />
                     </div>
                     <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                         {/* LinkedIn Placeholder */}
-                        <img src="/images/social-media/linkedin.svg" alt="LinkedIn" />
+                        <img
+                            src="/images/social-media/linkedin.svg"
+                            alt="LinkedIn"
+                        />
                     </div>
                 </div>
             </div>

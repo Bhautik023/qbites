@@ -9,7 +9,7 @@ const menuItems = [
   { label: "About Us", path: "/about-us" },
   { label: "Why Qbits?", path: "/why-qbits" },
   { label: "Product", path: "/product" },
-  { label: "Support", path: "/support" },
+  // { label: "Support", path: "/support" },
 ];
 
 const resourceCentreDropdown = [
@@ -124,7 +124,15 @@ const Header = () => {
                 </li>
               );
             })}
-
+            <li>
+              <a
+                href="https://erp.heavengreenenergy.com/helpdesk/qbits-service-620"
+                target="_blank"
+                className="text-white font-medium transition hover:text-green-200 px-1 pb-1"
+              >
+                Support
+              </a>
+            </li>
             {/* Resource Centre Dropdown */}
             <li className="relative dropdown-parent">
               <button
@@ -158,7 +166,15 @@ const Header = () => {
                       key={label}
                       href={path}
                       className={`block px-4 py-2 hover:bg-green-100 font-medium text-gray-800 ${
-                        pathname === path ? `text-green-700 font-bold ${index === 0 ? "rounded-t-md hover:rounded-t-md" : index === resourceCentreDropdown.length - 1 ? "rounded-b-md hover:rounded-b-md" : ""} ` : ""
+                        pathname === path
+                          ? `text-green-700 font-bold ${
+                              index === 0
+                                ? "rounded-t-md hover:rounded-t-md"
+                                : index === resourceCentreDropdown.length - 1
+                                ? "rounded-b-md hover:rounded-b-md"
+                                : ""
+                            } `
+                          : ""
                       }`}
                       onClick={() => setDropdownOpen(false)}
                     >
@@ -172,14 +188,15 @@ const Header = () => {
         </nav>
         {/* Contact Us button */}
         <div className="ml-4 md:ml-8 hidden md:block">
-          <Link
-            href="/contact"
-            className={`text-white font-medium transition hover:text-green-200 px-1 pb-1`}
+          <a
+            href="https://erp.heavengreenenergy.com/contact-us"
+            target="_blank"
+            className="text-white font-medium transition hover:text-green-200 px-1 pb-1"
           >
             <button className="bg-transparent border border-white rounded-full px-6 py-2 text-white font-semibold transition cursor-pointer">
               Contact Us
             </button>
-          </Link>
+          </a>
         </div>
       </header>
       {/* Mobile Menu */}
@@ -211,6 +228,15 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+              <a
+                href="https://erp.heavengreenenergy.com/helpdesk/qbits-service-620"
+                target="_blank"
+                className="text-white font-medium transition hover:text-green-200 px-1 pb-1"
+              >
+                Support
+              </a>
+            </li>
               {/* Resource Centre Dropdown (mobile) */}
               <li>
                 <details>
@@ -254,15 +280,16 @@ const Header = () => {
               </li>
               {/* Contact Us button (mobile) */}
               <li>
-                <Link
-                  href="/contact"
+                <a
+                  href="https://erp.heavengreenenergy.com/contact-us"
+                  target="_blank"
                   className="block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <button className="w-full border bg-white border-green-700 rounded-full px-6 py-2 text-green-700 font-semibold transition">
                     Contact Us
                   </button>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

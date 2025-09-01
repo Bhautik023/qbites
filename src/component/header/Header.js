@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <div>
-      <header className="absolute inset-x-0 top-0 z-50 h-16 flex items-center px-4 md:px-8 bg-transparent">
+      <header className="absolute inset-x-0 top-0 z-50 h-16 flex items-center px-4 md:px-8">
         {/* Logo & Brand */}
         <div className="flex items-center gap-2 mr-4 md:mr-8">
           <Link href="/" className="flex items-center">

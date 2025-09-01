@@ -1,3 +1,4 @@
+import VideoGallerySections from "@/component/videoGallerySections/VideoGallerySections";
 import React from "react";
 
 export const metadata = {
@@ -15,41 +16,41 @@ export const metadata = {
 };
 
 const Events = () => {
-    // Sample data for festivals
-    const festivals = [
-        { id: 1, image: "/images/events/event-image.png", title: "Festival 1" },
-        { id: 2, image: "/images/events/event-image.png", title: "Festival 2" },
-        { id: 3, image: "/images/events/event-image.png", title: "Festival 3" },
-        { id: 4, image: "/images/events/event-image.png", title: "Festival 4" },
-        { id: 5, image: "/images/events/event-image.png", title: "Festival 5" },
-        { id: 6, image: "/images/events/event-image.png", title: "Festival 6" },
-        { id: 7, image: "/images/events/event-image.png", title: "Festival 7" },
-        { id: 8, image: "/images/events/event-image.png", title: "Festival 8" },
-    ];
+    // // Sample data for festivals
+    // const festivals = [
+    //     { id: 1, image: "/images/events/event-image.png", title: "Festival 1" },
+    //     { id: 2, image: "/images/events/event-image.png", title: "Festival 2" },
+    //     { id: 3, image: "/images/events/event-image.png", title: "Festival 3" },
+    //     { id: 4, image: "/images/events/event-image.png", title: "Festival 4" },
+    //     { id: 5, image: "/images/events/event-image.png", title: "Festival 5" },
+    //     { id: 6, image: "/images/events/event-image.png", title: "Festival 6" },
+    //     { id: 7, image: "/images/events/event-image.png", title: "Festival 7" },
+    //     { id: 8, image: "/images/events/event-image.png", title: "Festival 8" },
+    // ];
 
-    // Sample data for trips
-    const trips = [
-        { id: 1, image: "/images/events/event-image.png", title: "Trip 1" },
-        { id: 2, image: "/images/events/event-image.png", title: "Trip 2" },
-        { id: 3, image: "/images/events/event-image.png", title: "Trip 3" },
-        { id: 4, image: "/images/events/event-image.png", title: "Trip 4" },
-        { id: 5, image: "/images/events/event-image.png", title: "Trip 5" },
-        { id: 6, image: "/images/events/event-image.png", title: "Trip 6" },
-        { id: 7, image: "/images/events/event-image.png", title: "Trip 7" },
-        { id: 8, image: "/images/events/event-image.png", title: "Trip 8" },
-    ];
+    // // Sample data for trips
+    // const trips = [
+    //     { id: 1, image: "/images/events/event-image.png", title: "Trip 1" },
+    //     { id: 2, image: "/images/events/event-image.png", title: "Trip 2" },
+    //     { id: 3, image: "/images/events/event-image.png", title: "Trip 3" },
+    //     { id: 4, image: "/images/events/event-image.png", title: "Trip 4" },
+    //     { id: 5, image: "/images/events/event-image.png", title: "Trip 5" },
+    //     { id: 6, image: "/images/events/event-image.png", title: "Trip 6" },
+    //     { id: 7, image: "/images/events/event-image.png", title: "Trip 7" },
+    //     { id: 8, image: "/images/events/event-image.png", title: "Trip 8" },
+    // ];
 
-    // Sample data for offices
-    const offices = [
-        { id: 1, image: "/images/events/event-image.png", title: "Office 1" },
-        { id: 2, image: "/images/events/event-image.png", title: "Office 2" },
-        { id: 3, image: "/images/events/event-image.png", title: "Office 3" },
-        { id: 4, image: "/images/events/event-image.png", title: "Office 4" },
-        { id: 5, image: "/images/events/event-image.png", title: "Office 5" },
-        { id: 6, image: "/images/events/event-image.png", title: "Office 6" },
-        { id: 7, image: "/images/events/event-image.png", title: "Office 7" },
-        { id: 8, image: "/images/events/event-image.png", title: "Office 8" },
-    ];
+    // // Sample data for offices
+    // const offices = [
+    //     { id: 1, image: "/images/events/event-image.png", title: "Office 1" },
+    //     { id: 2, image: "/images/events/event-image.png", title: "Office 2" },
+    //     { id: 3, image: "/images/events/event-image.png", title: "Office 3" },
+    //     { id: 4, image: "/images/events/event-image.png", title: "Office 4" },
+    //     { id: 5, image: "/images/events/event-image.png", title: "Office 5" },
+    //     { id: 6, image: "/images/events/event-image.png", title: "Office 6" },
+    //     { id: 7, image: "/images/events/event-image.png", title: "Office 7" },
+    //     { id: 8, image: "/images/events/event-image.png", title: "Office 8" },
+    // ];
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -62,9 +63,10 @@ const Events = () => {
                 />
             </div>
 
+            <VideoGallerySections />
+
             {/* Events Section */}
-            <div className="w-full px-4 py-12">
-                {/* Festivals Section */}
+            {/* <div className="w-full px-4 py-12">
                 <section className="mb-16 container mx-auto">
                     <div className="text-center mb-8">
                         <h2 className="text-2xl md:text-3xl font-semibold text-orange-500 mb-8">
@@ -108,7 +110,6 @@ const Events = () => {
                     </div>
                 </section>
 
-                {/* Our Trips Section */}
                 <section className="mb-16 bg-[#16A16C] -mx-4 px-4 py-12 md:py-16">
                     <div className="container mx-auto">
                         <div className="text-center mb-8">
@@ -154,7 +155,6 @@ const Events = () => {
                     </div>
                 </section>
 
-                {/* Our Offices Section */}
                 <section className="mb-16 container mx-auto">
                     <div className="text-center mb-8">
                         <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
@@ -197,7 +197,7 @@ const Events = () => {
                         ))}
                     </div>
                 </section>
-            </div>
+            </div> */}
         </div>
     );
 };

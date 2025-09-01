@@ -1,33 +1,22 @@
-'use client'
+"use client";
+import { downloadCompanyBrochure } from "@/utils/downloadBrochure";
 import React, { useState } from "react";
 
 const DownloadButton = () => {
     const [isDownloading, setIsDownloading] = useState(false);
 
     const handleDownload = async () => {
-        setIsDownloading(true);
-
         try {
-            const response = await fetch("/broucher.pdf");
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "Company-Brochure.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            // Clean up the URL object
-            window.URL.revokeObjectURL(url);
-        } catch (error) {
-            console.error("Download failed:", error);
+            setIsDownloading(true);
+            await downloadCompanyBrochure();
+        } catch (e) {
+            console.error(e);
             alert("Download failed. Please try again.");
         } finally {
             setIsDownloading(false);
         }
     };
+
     return (
         <section className="py-16 px-3">
             <div className="mx-auto">

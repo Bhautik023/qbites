@@ -126,7 +126,7 @@ const Header = () => {
             })}
             <li>
               <a
-                href="https://erp.heavengreenenergy.com/helpdesk/qbits-service-620"
+                href="https://support.qbitsenergy.com/helpdesk/qbits-service-arkesh-620"
                 target="_blank"
                 className="text-white font-medium transition hover:text-green-200 px-1 pb-1"
               >
@@ -189,7 +189,7 @@ const Header = () => {
         {/* Contact Us button */}
         <div className="ml-4 md:ml-8 hidden md:block">
           <a
-            href="https://erp.heavengreenenergy.com/contact-us"
+            href="https://support.qbitsenergy.com/contactus"
             target="_blank"
             className="text-white font-medium transition hover:text-green-200 px-1 pb-1"
           >
@@ -230,7 +230,7 @@ const Header = () => {
               ))}
               <li>
               <a
-                href="https://erp.heavengreenenergy.com/helpdesk/qbits-service-620"
+                href="https://support.qbitsenergy.com/helpdesk/qbits-service-arkesh-620"
                 target="_blank"
                 className="text-white font-medium transition hover:text-green-200 px-1 pb-1"
               >
@@ -281,7 +281,7 @@ const Header = () => {
               {/* Contact Us button (mobile) */}
               <li>
                 <a
-                  href="https://erp.heavengreenenergy.com/contact-us"
+                  href="https://support.qbitsenergy.com/contactus"
                   target="_blank"
                   className="block"
                   onClick={() => setMobileMenuOpen(false)}

@@ -53,7 +53,7 @@ const Footer = () => (
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
                         <a
-                            href="https://erp.heavengreenenergy.com/helpdesk/qbits-service-620"
+                            href="https://support.qbitsenergy.com/helpdesk/qbits-service-arkesh-620"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-green-600 text-[#16A16C]"
@@ -91,7 +91,7 @@ const Footer = () => (
                     <li className="flex items-center gap-2">
                         <img src="/images/bullet-icon.svg" alt="Bullet" />
                         <a
-                            href="https://erp.heavengreenenergy.com/contact-us"
+                            href="https://support.qbitsenergy.com/contactus"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:text-green-600 text-[#16A16C]"

@@ -49,7 +49,7 @@ export default function BlogList() {
             <div className="pt-2">
               {/* Link to dynamic author page: /blog/author/[author_id] */}
               <Link
-                href={`/resource-centre/blog/${b.author}`}
+                href={`/resource-centre/blog/${b.slug}`}
                 className="inline-flex items-center gap-2 text-[#F69133] font-semibold hover:underline"
               >
                 Read more
